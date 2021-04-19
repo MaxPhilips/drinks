@@ -4,7 +4,8 @@
 
 ### tables
 
-* ingredient categories: spirit, sugar, water, bitters, liquer
+* ingredient categories: spirit, liqueur, bitters, garnish
+* ingredient types: coffee liqueur
 * ingredients: Kahlua
 * recipe categories: cocktail, wine cocktail, mixed drink, shooter
 * recipes: Alexander

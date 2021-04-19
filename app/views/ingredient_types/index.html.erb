@@ -1,2 +1,10 @@
-<h1>IngredientTypes#index</h1>
-<p>Find me in app/views/ingredient_types/index.html.erb</p>
+<h1>IngredientTypes</h1>
+<ul>
+  <% @ingredient_types.each do |ingredient_type| %>
+    <li>
+      <a href="/ingredient_types/<%= ingredient_type.id %>">
+        <%= ingredient_type.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
