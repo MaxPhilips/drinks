@@ -6,4 +6,24 @@ class IngredientTypesController < ApplicationController
   def show
     @ingredient_type = IngredientType.find(params[:id])
   end
+
+  def new
+    @ingredient_type = IngredientType.new
+  end
+
+  def create
+    @ingredient_type = IngredientType.new(ingredient_type_params)
+
+    if @ingredient_type.save
+      redirect_to @ingredient_type
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def ingredient_type_params
+    params.require(:ingredient_type).permit(:name)
+  end
 end

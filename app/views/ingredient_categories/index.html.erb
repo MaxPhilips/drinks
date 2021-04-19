@@ -2,9 +2,7 @@
 <ul>
   <% @ingredient_categories.each do |ingredient_category| %>
     <li>
-      <a href="/ingredient_categories/<%= ingredient_category.id %>">
-        <%= ingredient_category.name %>
-      </a>
+      <%= link_to ingredient_category.name, ingredient_category %>
     </li>
   <% end %>
 </ul>

@@ -2,9 +2,7 @@
 <ul>
   <% @ingredient_types.each do |ingredient_type| %>
     <li>
-      <a href="/ingredient_types/<%= ingredient_type.id %>">
-        <%= ingredient_type.name %>
-      </a>
+      <%= link_to ingredient_type.name, ingredient_type %>
     </li>
   <% end %>
 </ul>
