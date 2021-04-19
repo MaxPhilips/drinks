@@ -1,24 +1,13 @@
-# README
+# drinks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## db
 
-Things you may want to cover:
+### tables
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ingredient categories: spirit, sugar, water, bitters, liquer
+* ingredients: Kahlua
+* recipe categories: cocktail, wine cocktail, mixed drink, shooter
+* recipes: Alexander
+* recipe variations
+* served: neat, up, down, on the rocks
+* drinkware: coupe, highball, rocks glass
