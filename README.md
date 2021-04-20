@@ -6,7 +6,7 @@
 
 * ingredient categories: spirit, liqueur, bitters, garnish
 * ingredient types: coffee liqueur
-* ingredients: Kahlua
+* ingredients: Kahlua|Liqueur|Coffee liqueur|Yes
 * recipe categories: cocktail, wine cocktail, mixed drink, shooter
 * recipes: Alexander
 * recipe variations

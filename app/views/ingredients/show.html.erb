@@ -1,0 +1,12 @@
+<h1>Ingredient</h1>
+<p><%= @ingredient.name %></p>
+<p><%= @ingredient.ingredient_category.name %></p>
+<p><%= @ingredient.ingredient_type.name %></p>
+<p><%= @ingredient.in_stock %></p>
+<ul>
+  <li><%= link_to 'Edit', edit_ingredient_path(@ingredient) %></li>
+  <li><%= link_to 'Destroy',
+                  ingredient_path(@ingredient),
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %></li>
+</ul>

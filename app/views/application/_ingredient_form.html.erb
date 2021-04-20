@@ -1,0 +1,35 @@
+<%= form_with model: ingredient do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% ingredient.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :ingredient_category %><br>
+    <%= form.collection_select(:ingredient_category, IngredientCategory.all, :id, :name) %>
+    <% ingredient.errors.full_messages_for(:ingredient_category).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :ingredient_type %><br>
+    <%= form.collection_select(:ingredient_type, IngredientType.all, :id, :name) %>
+    <% ingredient.errors.full_messages_for(:ingredient_type).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :in_stock_true, 'In stock:' %>
+    <%= form.radio_button :in_stock, true, :checked => true %>
+    <%= form.label :in_stock_false, 'Out of stock:' %>
+    <%= form.radio_button :in_stock, false %>
+    <% ingredient.errors.full_messages_for(:in_stock).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
