@@ -21,6 +21,20 @@ class IngredientCategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @ingredient_category = IngredientCategory.find(params[:id])
+  end
+
+  def update
+    @ingredient_category = IngredientCategory.find(params[:id])
+
+    if @ingredient_category.update(ingredient_category_params)
+      redirect_to @ingredient_category
+    else
+      render :edit
+    end
+  end
+
   private
 
   def ingredient_category_params
