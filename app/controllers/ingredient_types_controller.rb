@@ -35,6 +35,13 @@ class IngredientTypesController < ApplicationController
     end
   end
 
+  def destroy
+    @ingredient_type = IngredientType.find(params[:id])
+    @ingredient_type.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def ingredient_type_params

@@ -35,6 +35,13 @@ class IngredientCategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @ingredient_category = IngredientCategory.find(params[:id])
+    @ingredient_category.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def ingredient_category_params

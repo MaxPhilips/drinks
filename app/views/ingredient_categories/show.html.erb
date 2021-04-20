@@ -1,5 +1,9 @@
 <h1>IngredientCategory</h1>
 <p><%= @ingredient_category.name %></p>
 <ul>
-  <li><%= link_to "Edit", edit_ingredient_category_path(@ingredient_category) %></li>
+  <li><%= link_to 'Edit', edit_ingredient_category_path(@ingredient_category) %></li>
+  <li><%= link_to 'Destroy',
+                  ingredient_category_path(@ingredient_category),
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'} %></li>
 </ul>
