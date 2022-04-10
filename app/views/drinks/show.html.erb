@@ -1,5 +1,11 @@
 <h1>Drinks#show</h1>
 <p>Find me in app/views/drinks/show.html.erb</p>
+
 <h2><%= @drink.name %></h2>
 <p><%= @drink.description %></p>
 <p><%= @drink.preparation %></p>
+
+<ul>
+  <li><%= link_to 'Edit', edit_drink_path(@drink) %></li>
+  <li><%= link_to 'Destroy', drink_path(@drink), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>
