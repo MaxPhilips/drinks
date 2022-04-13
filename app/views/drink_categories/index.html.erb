@@ -1,0 +1,11 @@
+<h1>Drink Categories#index</h1>
+
+<ul>
+  <% @drink_categories.each do |drink_category| %>
+    <li>
+      <%= link_to drink_category.name, drink_category %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'New Drink Category', new_drink_category_path %></p>

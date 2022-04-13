@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :services
 
   resources :drinkwares
+
+  resources :drink_categories
 end

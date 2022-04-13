@@ -39,12 +39,12 @@ class DrinksController < ApplicationController
     @drink = Drink.find(params[:id])
     @drink.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to drinks_path, status: :see_other
   end
 
   private
 
   def drink_params
-    params.require(:drink).permit(:name, :description, :preparation, :service_id, :drinkware_id)
+    params.require(:drink).permit(:name, :description, :preparation, :service_id, :drinkware_id, :drink_category_id)
   end
 end

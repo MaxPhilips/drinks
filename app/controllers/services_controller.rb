@@ -39,7 +39,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     @service.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to services_path, status: :see_other
   end
 
   private

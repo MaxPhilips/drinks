@@ -40,6 +40,14 @@
   </div>
 
   <div>
+    <%= form.label :drink_category_id %><br>
+    <%= form.collection_select :drink_category_id, DrinkCategory.all, :id, :name, include_blank: true %>
+    <% @drink.errors.full_messages_for(:drink_category_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
