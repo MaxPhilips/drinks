@@ -6,3 +6,5 @@
   <li><%= link_to 'Edit', edit_service_path(@service) %></li>
   <li><%= link_to 'Destroy', service_path(@service), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
 </ul>
+
+<p><%= link_to 'Back to Services', services_path %></p>

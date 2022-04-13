@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :drinks
 
   resources :services
+
+  resources :drinkwares
 end

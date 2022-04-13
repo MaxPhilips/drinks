@@ -1,0 +1,10 @@
+<h1>Drinkwares#show</h1>
+
+<h2><%= @drinkware.name %></h2>
+
+<ul>
+  <li><%= link_to 'Edit', edit_drinkware_path(@drinkware) %></li>
+  <li><%= link_to 'Destroy', drinkware_path(@drinkware), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>
+
+<p><%= link_to 'Back to Drinkwares', drinkwares_path %></p>

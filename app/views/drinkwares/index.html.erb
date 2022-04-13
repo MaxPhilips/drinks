@@ -1,0 +1,13 @@
+<h1>Drinkwares#index</h1>
+
+<ul>
+  <% @drinkwares.each do |drinkware| %>
+    <li>
+      <%= link_to drinkware.name, drinkware %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Drinks', drinks_path %></p>
+<p><%= link_to 'Services', services_path %></p>
+<p><%= link_to 'New Drinkware', new_drinkware_path %></p>

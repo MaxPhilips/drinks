@@ -1,0 +1,2 @@
+module DrinkwareHelper
+end
