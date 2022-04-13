@@ -35,6 +35,7 @@ quantity_id
 ingredients
 id
 name
+in_stock
 fk: ingredient_category
 fk: ingredient_type
 
