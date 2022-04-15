@@ -30,3 +30,5 @@ drinks = Drink.create([
     drink_category: drink_categories.first
   },
 ])
+
+ingredient_categories = IngredientCategory.create([{ name: 'Spirit' }, { name: 'Liquer' }])

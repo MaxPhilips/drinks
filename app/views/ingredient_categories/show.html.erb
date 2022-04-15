@@ -1,0 +1,8 @@
+<h1>Ingredient Categories#show</h1>
+
+<h2><%= @ingredient_category.name %></h2>
+
+<ul>
+  <li><%= link_to 'Edit', edit_ingredient_category_path(@ingredient_category) %></li>
+  <li><%= link_to 'Destroy', ingredient_category_path(@ingredient_category), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>
