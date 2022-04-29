@@ -32,3 +32,5 @@ drinks = Drink.create([
 ])
 
 ingredient_categories = IngredientCategory.create([{ name: 'Spirit' }, { name: 'Liquer' }])
+
+ingredient_types = IngredientType.create([{ name: 'Brandy' }, { name: 'Orange liquer' }])
