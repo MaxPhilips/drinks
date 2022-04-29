@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  in_stock: false
+  ingredient_category: one
+  ingredient_type: one
+
+two:
+  name: MyString
+  in_stock: false
+  ingredient_category: two
+  ingredient_type: two

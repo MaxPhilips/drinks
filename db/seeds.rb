@@ -12,25 +12,44 @@ drinkwares = Drinkware.create([{ name: 'Cocktail glass' }, { name: 'Old fashione
 
 drink_categories = DrinkCategory.create([{ name: 'Cocktail' }])
 
-drinks = Drink.create([
-  {
-    name: 'Sidecar',
-    description: 'The sidecar is any cocktail traditionally made with cognac, orange liqueur, plus lemon juice.',
-    preparation: 'Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.',
-    service: services.first,
-    drinkware: drinkwares.first,
-    drink_category: drink_categories.first
-  },
-  {
-    name: 'Caipirinha',
-    description: "Caipirinha is Brazil's national cocktail, made with cachaça (sugarcane hard liquor), sugar, and lime.",
-    preparation: 'Place lime and sugar into a double old fashioned glass and muddle gently. Fill the glass with cracked ice and add Cachaça. Stir gently to involve ingredients.',
-    service: services.second,
-    drinkware: drinkwares.second,
-    drink_category: drink_categories.first
-  },
-])
+drinks = Drink.create(
+  [
+    {
+      name: 'Sidecar',
+      description: 'The sidecar is any cocktail traditionally made with cognac, orange liqueur, plus lemon juice.',
+      preparation: 'Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.',
+      service: services.first,
+      drinkware: drinkwares.first,
+      drink_category: drink_categories.first
+    },
+    {
+      name: 'Caipirinha',
+      description: "Caipirinha is Brazil's national cocktail, made with cachaça (sugarcane hard liquor), sugar, and lime.",
+      preparation: 'Place lime and sugar into a double old fashioned glass and muddle gently. Fill the glass with cracked ice and add Cachaça. Stir gently to involve ingredients.',
+      service: services.second,
+      drinkware: drinkwares.second,
+      drink_category: drink_categories.first
+    },
+  ]
+)
 
 ingredient_categories = IngredientCategory.create([{ name: 'Spirit' }, { name: 'Liquer' }])
 
-ingredient_types = IngredientType.create([{ name: 'Brandy' }, { name: 'Orange liquer' }])
+ingredient_types = IngredientType.create([{ name: 'Brandy' }, { name: 'Triple sec' }])
+
+ingredients = Ingredient.create(
+  [
+    {
+      name: 'Courvoisier',
+      in_stock: true,
+      ingredient_category: ingredient_categories.first,
+      ingredient_type: ingredient_types.first
+    },
+    {
+      name: 'Cointreau',
+      in_stock: true,
+      ingredient_category: ingredient_categories.first,
+      ingredient_type: ingredient_types.first
+    }
+  ]
+)

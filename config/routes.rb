@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :drink_categories
 
+  resources :ingredients
+
   resources :ingredient_categories
 
   resources :ingredient_types
