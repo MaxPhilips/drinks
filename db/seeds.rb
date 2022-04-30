@@ -7,15 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Service.destroy_all
-services = Service.create([{ name: 'Straight up' }, { name: 'On the rocks' }])
+services = Service.create!([{ name: 'Straight up' }, { name: 'On the rocks' }])
 puts "Created #{Service.count} Service records"
 
 Drinkware.destroy_all
-drinkwares = Drinkware.create([{ name: 'Cocktail glass' }, { name: 'Old fashioned glass' }])
+drinkwares = Drinkware.create!([{ name: 'Cocktail glass' }, { name: 'Old fashioned glass' }])
 puts "Created #{Drinkware.count} Drinkware records"
 
 DrinkCategory.destroy_all
-drink_categories = DrinkCategory.create([{ name: 'Cocktail' }])
+drink_categories = DrinkCategory.create!([{ name: 'Cocktail' }])
 puts "Created #{DrinkCategory.count} DrinkCategory records"
 
 Drink.destroy_all
@@ -42,7 +42,7 @@ drinks = Drink.create!(
 puts "Created #{Drink.count} Drink records"
 
 IngredientCategory.destroy_all
-ingredient_categories = IngredientCategory.create(
+ingredient_categories = IngredientCategory.create!(
   [
     { name: 'Spirit' },
     { name: 'Liquer' },
@@ -54,7 +54,7 @@ ingredient_categories = IngredientCategory.create(
 puts "Created #{IngredientCategory.count} IngredientCategory records"
 
 IngredientType.destroy_all
-ingredient_types = IngredientType.create(
+ingredient_types = IngredientType.create!(
   [
     { name: 'Brandy' },
     { name: 'Triple sec liquer' },
@@ -67,7 +67,7 @@ ingredient_types = IngredientType.create(
 puts "Created #{IngredientType.count} IngredientType records"
 
 Ingredient.destroy_all
-ingredients = Ingredient.create(
+ingredients = Ingredient.create!(
   [
     {
       name: 'Courvoisier', # Maybe this is supposed to be 'cognac'? It makes more sense for cachaca
@@ -110,11 +110,11 @@ ingredients = Ingredient.create(
 puts "Created #{Ingredient.count} Ingredient records"
 
 Quantity.destroy_all
-quantities = Quantity.create([{ amount: 5 }, { amount: 2 }, { amount: 6 }, { amount: 1 }, { amount: 4 }])
+quantities = Quantity.create!([{ amount: 5 }, { amount: 2 }, { amount: 6 }, { amount: 1 }, { amount: 4 }])
 puts "Created #{Quantity.count} Quantity records"
 
 Unit.destroy_all
-units = Unit.create(
+units = Unit.create!(
   [
     { name: 'Centiliter', abbreviation: 'cl' },
     { name: 'Ounce', abbreviation: 'oz' },
@@ -125,7 +125,7 @@ units = Unit.create(
 puts "Created #{Unit.count} Unit records"
 
 DrinkIngredient.destroy_all
-drink_ingredients = DrinkIngredient.create(
+drink_ingredients = DrinkIngredient.create!(
   [
     # Sidecar: 5 cl cognac, 2 cl triple sec, 2 cl lemon juice
     {
