@@ -1,0 +1,9 @@
+<h1>Units#show</h1>
+
+<h2><%= @unit.name %></h2>
+<p><%= @unit.abbreviation %></p>
+
+<ul>
+  <li><%= link_to 'Edit', edit_unit_path(@unit) %></li>
+  <li><%= link_to 'Destroy', unit_path(@unit), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>

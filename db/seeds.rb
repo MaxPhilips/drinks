@@ -55,3 +55,5 @@ ingredients = Ingredient.create(
 )
 
 quantities = Quantity.create([{ amount: 5 }, { amount: 2 }])
+
+units = Unit.create([{ name: 'Centiliter', abbreviation: 'cl' }, { name: 'Ounce', abbreviation: 'oz' }])

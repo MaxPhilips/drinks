@@ -66,3 +66,4 @@ amount
 units
 id
 name
+abbreviation

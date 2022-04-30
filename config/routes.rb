@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :ingredient_types
 
   resources :quantities
+
+  resources :units
 end
