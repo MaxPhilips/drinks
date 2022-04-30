@@ -10,11 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_30_003715) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_30_010114) do
   create_table "drink_categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "drink_ingredients", force: :cascade do |t|
+    t.integer "drink_id", null: false
+    t.integer "ingredient_id", null: false
+    t.integer "quantity_id", null: false
+    t.integer "unit_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drink_id"], name: "index_drink_ingredients_on_drink_id"
+    t.index ["ingredient_id"], name: "index_drink_ingredients_on_ingredient_id"
+    t.index ["quantity_id"], name: "index_drink_ingredients_on_quantity_id"
+    t.index ["unit_id"], name: "index_drink_ingredients_on_unit_id"
   end
 
   create_table "drinks", force: :cascade do |t|
@@ -79,6 +92,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_003715) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "drink_ingredients", "drinks"
+  add_foreign_key "drink_ingredients", "ingredients"
+  add_foreign_key "drink_ingredients", "quantities"
+  add_foreign_key "drink_ingredients", "units"
   add_foreign_key "drinks", "drink_categories"
   add_foreign_key "drinks", "drinkwares"
   add_foreign_key "drinks", "services"

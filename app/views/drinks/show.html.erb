@@ -1,11 +1,19 @@
 <h1>Drinks#show</h1>
 
 <h2><%= @drink.name %></h2>
-<p><%= @drink.description %></p>
-<p><%= @drink.preparation %></p>
-<p><%= @drink.service.name %></p>
-<p><%= @drink.drinkware.name %></p>
-<p><%= @drink.drink_category.name %></p>
+<p>Description: <%= @drink.description %></p>
+<p>Preparation: <%= @drink.preparation %></p>
+<p>Served: <%= @drink.service.name %></p>
+<p>Standard drinkware: <%= @drink.drinkware.name %></p>
+<p>Type: <%= @drink.drink_category.name %></p>
+<p>Ingredients:</p>
+<ul>
+  <% @drink.drink_ingredients.each do |drink_ingredient| %>
+    <li>
+      <%= drink_ingredient.quantity.amount %> <%= drink_ingredient.unit.abbreviation %> <%= drink_ingredient.ingredient.name %>
+    </li>
+  <% end %>
+</ul>
 
 <ul>
   <li><%= link_to 'Edit', edit_drink_path(@drink) %></li>
