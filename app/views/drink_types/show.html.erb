@@ -1,0 +1,8 @@
+<h1>Drink Types#show</h1>
+
+<h2><%= @drink_type.name %></h2>
+
+<ul>
+  <li><%= link_to 'Edit', edit_drink_type_path(@drink_type) %></li>
+  <li><%= link_to 'Destroy', drink_type_path(@drink_type), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>

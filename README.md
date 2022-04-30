@@ -72,7 +72,7 @@ abbreviation
 
 TODOs:
 
-rename drink_category to drink_type
+rename drink_category to drink_type :check:
 
 rename ingredient to brand
 

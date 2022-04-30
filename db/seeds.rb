@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+DrinkType.destroy_all
+drink_types = DrinkType.create!([{ name: 'Cocktail' }])
+puts "Created #{DrinkType.count} DrinkType records"
+
 Service.destroy_all
 services = Service.create!([{ name: 'Straight up' }, { name: 'On the rocks' }])
 puts "Created #{Service.count} Service records"
@@ -14,28 +18,24 @@ Drinkware.destroy_all
 drinkwares = Drinkware.create!([{ name: 'Cocktail glass' }, { name: 'Old fashioned glass' }])
 puts "Created #{Drinkware.count} Drinkware records"
 
-DrinkCategory.destroy_all
-drink_categories = DrinkCategory.create!([{ name: 'Cocktail' }])
-puts "Created #{DrinkCategory.count} DrinkCategory records"
-
 Drink.destroy_all
 drinks = Drink.create!(
   [
     {
       name: 'Sidecar',
+      drink_type: drink_types.first,
       description: 'The sidecar is any cocktail traditionally made with cognac, orange liqueur, plus lemon juice.',
       preparation: 'Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.',
       service: services.first,
-      drinkware: drinkwares.first,
-      drink_category: drink_categories.first
+      drinkware: drinkwares.first
     },
     {
       name: 'Caipirinha',
+      drink_type: drink_types.first,
       description: "Caipirinha is Brazil's national cocktail, made with cachaça (sugarcane hard liquor), sugar, and lime.",
       preparation: 'Place lime and sugar into a double old fashioned glass and muddle gently. Fill the glass with cracked ice and add Cachaça. Stir gently to involve ingredients.',
       service: services.second,
-      drinkware: drinkwares.second,
-      drink_category: drink_categories.first
+      drinkware: drinkwares.second
     }
   ]
 )

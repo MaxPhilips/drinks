@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   resources :drinks
 
+  resources :drink_types
+
   resources :services
 
   resources :drinkwares
-
-  resources :drink_categories
 
   resources :ingredients
 

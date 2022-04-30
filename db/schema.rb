@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_30_010114) do
-  create_table "drink_categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2022_04_30_060457) do
   create_table "drink_ingredients", force: :cascade do |t|
     t.integer "drink_id", null: false
     t.integer "ingredient_id", null: false
@@ -30,6 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_010114) do
     t.index ["unit_id"], name: "index_drink_ingredients_on_unit_id"
   end
 
+  create_table "drink_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "drinks", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -38,8 +38,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_010114) do
     t.datetime "updated_at", null: false
     t.integer "service_id", null: false
     t.integer "drinkware_id", null: false
-    t.integer "drink_category_id", null: false
-    t.index ["drink_category_id"], name: "index_drinks_on_drink_category_id"
+    t.integer "drink_type_id", null: false
+    t.index ["drink_type_id"], name: "index_drinks_on_drink_type_id"
     t.index ["drinkware_id"], name: "index_drinks_on_drinkware_id"
     t.index ["service_id"], name: "index_drinks_on_service_id"
   end
@@ -96,7 +96,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_010114) do
   add_foreign_key "drink_ingredients", "ingredients"
   add_foreign_key "drink_ingredients", "quantities"
   add_foreign_key "drink_ingredients", "units"
-  add_foreign_key "drinks", "drink_categories"
+  add_foreign_key "drinks", "drink_types"
   add_foreign_key "drinks", "drinkwares"
   add_foreign_key "drinks", "services"
   add_foreign_key "ingredients", "ingredient_categories"

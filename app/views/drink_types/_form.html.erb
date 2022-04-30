@@ -1,8 +1,8 @@
-<%= form_with model: @drink_category do |form| %>
+<%= form_with model: @drink_type do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-    <% @drink_category.errors.full_messages_for(:name).each do |message| %>
+    <% @drink_type.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
