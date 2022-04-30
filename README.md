@@ -25,12 +25,24 @@ fk: served
 fk: drinkware
 fk: drink_category
 
+served
+id
+name
+
+drinkware
+id
+name
+
+drink_category
+id
+name
+
 join table: drink_ingredients
 id
 drink_id
 ingredient_id
-unit_id
 quantity_id
+unit_id
 
 ingredients
 id
@@ -47,22 +59,10 @@ ingredient_types
 id
 name
 
-units
-id
-name
-
 quantities
 id
-name
+amount
 
-served
-id
-name
-
-drinkware
-id
-name
-
-drink_category
+units
 id
 name

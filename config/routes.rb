@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :ingredient_categories
 
   resources :ingredient_types
+
+  resources :quantities
 end

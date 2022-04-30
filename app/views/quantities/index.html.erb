@@ -1,0 +1,11 @@
+<h1>Quantities#index</h1>
+
+<ul>
+  <% @quantities.each do |quantity| %>
+    <li>
+      <%= link_to quantity.amount, quantity %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'New Quantity', new_quantity_path %></p>

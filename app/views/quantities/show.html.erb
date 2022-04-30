@@ -1,0 +1,8 @@
+<h1>Quantities#show</h1>
+
+<h2><%= @quantity.amount %></h2>
+
+<ul>
+  <li><%= link_to 'Edit', edit_quantity_path(@quantity) %></li>
+  <li><%= link_to 'Destroy', quantity_path(@quantity), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>

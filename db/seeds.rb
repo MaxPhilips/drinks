@@ -53,3 +53,5 @@ ingredients = Ingredient.create(
     }
   ]
 )
+
+quantities = Quantity.create([{ amount: 5 }, { amount: 2 }])
