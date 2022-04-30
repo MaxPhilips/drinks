@@ -67,3 +67,15 @@ units
 id
 name
 abbreviation
+
+----
+
+TODOs:
+
+rename drink_category to drink_type
+
+rename ingredient to brand
+
+rename ingredient_type to ingredient
+
+rename ingredient_category to ingredient_type

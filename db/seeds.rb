@@ -57,9 +57,9 @@ IngredientType.destroy_all
 ingredient_types = IngredientType.create!(
   [
     { name: 'Brandy' },
-    { name: 'Triple sec liquer' },
+    { name: 'Triple sec' },
     { name: 'Lemon juice' },
-    { name: 'Distilled beverage' },
+    { name: 'Cachaça' },
     { name: 'Lime' },
     { name: 'Sugar' }
   ]
@@ -70,7 +70,7 @@ Ingredient.destroy_all
 ingredients = Ingredient.create!(
   [
     {
-      name: 'Courvoisier', # Maybe this is supposed to be 'cognac'? It makes more sense for cachaca
+      name: 'Courvoisier',
       in_stock: true,
       ingredient_category: ingredient_categories.first,
       ingredient_type: ingredient_types.first
@@ -88,7 +88,7 @@ ingredients = Ingredient.create!(
       ingredient_type: ingredient_types.third
     },
     {
-      name: 'Cachaça',
+      name: 'Leblon',
       in_stock: false,
       ingredient_category: ingredient_categories.first,
       ingredient_type: ingredient_types.fourth

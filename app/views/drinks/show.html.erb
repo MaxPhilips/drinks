@@ -1,11 +1,10 @@
 <h1>Drinks#show</h1>
 
 <h2><%= @drink.name %></h2>
-<p>Description: <%= @drink.description %></p>
-<p>Preparation: <%= @drink.preparation %></p>
+<p><%= @drink.description %></p>
+<p>Type: <%= @drink.drink_category.name %></p>
 <p>Served: <%= @drink.service.name %></p>
 <p>Standard drinkware: <%= @drink.drinkware.name %></p>
-<p>Type: <%= @drink.drink_category.name %></p>
 <p>Ingredients:</p>
 <ul>
   <% @drink.drink_ingredients.each do |drink_ingredient| %>
@@ -14,6 +13,7 @@
     </li>
   <% end %>
 </ul>
+<p>Preparation: <%= @drink.preparation %></p>
 
 <ul>
   <li><%= link_to 'Edit', edit_drink_path(@drink) %></li>
