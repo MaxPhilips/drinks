@@ -1,4 +1,4 @@
-class IngredientsController < ApplicationController
+class IngredientController < ApplicationController
   def index
     @ingredients = Ingredient.all
   end
@@ -28,7 +28,7 @@ class IngredientsController < ApplicationController
   def update
     @ingredient = Ingredient.find(params[:id])
 
-    if @ingredient.update(drink_params)
+    if @ingredient.update(ingredient_params)
       redirect_to @ingredient
     else
       render :edit, status: :unprocessable_entity
@@ -45,6 +45,6 @@ class IngredientsController < ApplicationController
   private
 
   def ingredient_params
-    params.require(:ingredient).permit(:name, :in_stock, :ingredient_category_id, :ingredient_type_id)
+    params.require(:ingredient).permit(:name)
   end
 end

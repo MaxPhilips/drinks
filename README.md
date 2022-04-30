@@ -74,8 +74,8 @@ TODOs:
 
 rename drink_category to drink_type :check:
 
-rename ingredient to brand
+rename ingredient to brand, add description :check:
 
-rename ingredient_type to ingredient
+rename ingredient_type to ingredient :check:
 
 rename ingredient_category to ingredient_type

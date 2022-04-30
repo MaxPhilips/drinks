@@ -53,8 +53,8 @@ ingredient_categories = IngredientCategory.create!(
 )
 puts "Created #{IngredientCategory.count} IngredientCategory records"
 
-IngredientType.destroy_all
-ingredient_types = IngredientType.create!(
+Ingredient.destroy_all
+ingredients = Ingredient.create!(
   [
     { name: 'Brandy' },
     { name: 'Triple sec' },
@@ -64,50 +64,35 @@ ingredient_types = IngredientType.create!(
     { name: 'Sugar' }
   ]
 )
-puts "Created #{IngredientType.count} IngredientType records"
+puts "Created #{Ingredient.count} Ingredient records"
 
-Ingredient.destroy_all
-ingredients = Ingredient.create!(
+Brand.destroy_all
+Brands = Brand.create!(
   [
     {
       name: 'Courvoisier',
+      description: 'Courvoisier is a brand of cognac, with production based in the town of Jarnac in the Charente region of France. It is the youngest and smallest of the "big four" cognac houses (the others are Hennessy, Rémy Martin, and Martell).',
       in_stock: true,
       ingredient_category: ingredient_categories.first,
-      ingredient_type: ingredient_types.first
+      ingredient: ingredients.first
     },
     {
       name: 'Cointreau',
+      description: "Cointreau is an orange-flavoured triple sec liqueur produced in Saint-Barthélemy-d'Anjou, France.",
       in_stock: true,
       ingredient_category: ingredient_categories.second,
-      ingredient_type: ingredient_types.second
-    },
-    {
-      name: 'Lemon juice', # This duplicates the ingredient type...
-      in_stock: true,
-      ingredient_category: ingredient_categories.third,
-      ingredient_type: ingredient_types.third
+      ingredient: ingredients.second
     },
     {
       name: 'Leblon',
+      description: 'Leblon Cachaça is a premium artisanal brand of the spirit cachaça produced at the Destilaria Maison Leblon in Minas Gerais, Brazil.',
       in_stock: false,
       ingredient_category: ingredient_categories.first,
-      ingredient_type: ingredient_types.fourth
-    },
-    {
-      name: 'Lime', # This duplicates the ingredient type...
-      in_stock: true,
-      ingredient_category: ingredient_categories.fourth,
-      ingredient_type: ingredient_types.fourth
-    },
-    {
-      name: 'Sugar', # This duplicates the ingredient type...
-      in_stock: false,
-      ingredient_category: ingredient_categories.fifth,
-      ingredient_type: ingredient_types[5]
+      ingredient: ingredients.fourth
     }
   ]
 )
-puts "Created #{Ingredient.count} Ingredient records"
+puts "Created #{Brand.count} Brand records"
 
 Quantity.destroy_all
 quantities = Quantity.create!([{ amount: 5 }, { amount: 2 }, { amount: 6 }, { amount: 1 }, { amount: 4 }])

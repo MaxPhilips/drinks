@@ -12,11 +12,11 @@ Rails.application.routes.draw do
 
   resources :drinkwares
 
-  resources :ingredients
-
   resources :ingredient_categories
 
-  resources :ingredient_types
+  resources :ingredients
+
+  resources :brands
 
   resources :quantities
 

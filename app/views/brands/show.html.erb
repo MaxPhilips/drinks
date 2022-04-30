@@ -1,0 +1,12 @@
+<h1>Brands#show</h1>
+
+<h2><%= @brand.name %></h2>
+<p><%= @brand.description %></p>
+<p><%= @brand.in_stock %></p>
+<p><%= @brand.ingredient_category.name %></p>
+<p><%= @brand.ingredient_type.name %></p>
+
+<ul>
+  <li><%= link_to 'Edit', edit_brand_path(@brand) %></li>
+  <li><%= link_to 'Destroy', brand_path(@brand), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</ul>

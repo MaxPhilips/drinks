@@ -1,8 +1,16 @@
-<%= form_with model: @ingredient do |form| %>
+<%= form_with model: @brand do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-    <% @ingredient.errors.full_messages_for(:name).each do |message| %>
+    <% @brand.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+    <% @brand.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -10,7 +18,7 @@
   <div>
     <%= form.label :in_stock %><br>
     <%= form.check_box :in_stock %>
-    <% @ingredient.errors.full_messages_for(:in_stock).each do |message| %>
+    <% @brand.errors.full_messages_for(:in_stock).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -18,7 +26,7 @@
   <div>
     <%= form.label :ingredient_category_id %><br>
     <%= form.collection_select :ingredient_category_id, IngredientCategory.all, :id, :name, include_blank: true %>
-    <% @ingredient.errors.full_messages_for(:ingredient_category_id).each do |message| %>
+    <% @brand.errors.full_messages_for(:ingredient_category_id).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -26,7 +34,7 @@
   <div>
     <%= form.label :ingredient_type_id %><br>
     <%= form.collection_select :ingredient_type_id, IngredientType.all, :id, :name, include_blank: true %>
-    <% @ingredient.errors.full_messages_for(:ingredient_type_id).each do |message| %>
+    <% @brand.errors.full_messages_for(:ingredient_type_id).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
