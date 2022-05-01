@@ -18,5 +18,12 @@ module Drinks
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Remove field_with_errors wrapper when form validation fails:
+    # https://gist.github.com/ehsanatwork/6dd0c65e290ee505a103a62ad24b3675
+    #
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      html_tag.html_safe
+    end
   end
 end

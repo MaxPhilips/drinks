@@ -3,7 +3,7 @@
 <ul>
   <% @brands.each do |brand| %>
     <li>
-      <%= link_to brand.name, brand %>
+      <%= link_to "#{brand.name} #{brand.ingredient.name}", brand %>
     </li>
   <% end %>
 </ul>
