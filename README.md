@@ -44,18 +44,19 @@ ingredient_id
 quantity_id
 unit_id
 
-ingredients
+brands
 id
 name
+description
 in_stock
 fk: ingredient_category
 fk: ingredient_type
 
-ingredient_categories
+ingredient_types
 id
 name
 
-ingredient_types
+ingredients
 id
 name
 
@@ -67,15 +68,3 @@ units
 id
 name
 abbreviation
-
-----
-
-TODOs:
-
-rename drink_category to drink_type :check:
-
-rename ingredient to brand, add description :check:
-
-rename ingredient_type to ingredient :check:
-
-rename ingredient_category to ingredient_type

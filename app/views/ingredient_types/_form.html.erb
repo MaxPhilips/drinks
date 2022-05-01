@@ -1,8 +1,8 @@
-<%= form_with model: @ingredient_category do |form| %>
+<%= form_with model: @ingredient_type do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-    <% @ingredient_category.errors.full_messages_for(:name).each do |message| %>
+    <% @ingredient_type.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

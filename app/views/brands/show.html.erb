@@ -3,8 +3,8 @@
 <h2><%= @brand.name %></h2>
 <p><%= @brand.description %></p>
 <p><%= @brand.in_stock %></p>
-<p><%= @brand.ingredient_category.name %></p>
 <p><%= @brand.ingredient_type.name %></p>
+<p><%= @brand.ingredient.name %></p>
 
 <ul>
   <li><%= link_to 'Edit', edit_brand_path(@brand) %></li>

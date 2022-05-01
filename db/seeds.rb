@@ -41,8 +41,8 @@ drinks = Drink.create!(
 )
 puts "Created #{Drink.count} Drink records"
 
-IngredientCategory.destroy_all
-ingredient_categories = IngredientCategory.create!(
+IngredientType.destroy_all
+ingredient_types = IngredientType.create!(
   [
     { name: 'Spirit' },
     { name: 'Liquer' },
@@ -51,12 +51,12 @@ ingredient_categories = IngredientCategory.create!(
     { name: 'Sweetener' }
   ]
 )
-puts "Created #{IngredientCategory.count} IngredientCategory records"
+puts "Created #{IngredientType.count} IngredientType records"
 
 Ingredient.destroy_all
 ingredients = Ingredient.create!(
   [
-    { name: 'Brandy' },
+    { name: 'Cognac' },
     { name: 'Triple sec' },
     { name: 'Lemon juice' },
     { name: 'Cachaça' },
@@ -73,21 +73,21 @@ Brands = Brand.create!(
       name: 'Courvoisier',
       description: 'Courvoisier is a brand of cognac, with production based in the town of Jarnac in the Charente region of France. It is the youngest and smallest of the "big four" cognac houses (the others are Hennessy, Rémy Martin, and Martell).',
       in_stock: true,
-      ingredient_category: ingredient_categories.first,
+      ingredient_type: ingredient_types.first,
       ingredient: ingredients.first
     },
     {
       name: 'Cointreau',
       description: "Cointreau is an orange-flavoured triple sec liqueur produced in Saint-Barthélemy-d'Anjou, France.",
       in_stock: true,
-      ingredient_category: ingredient_categories.second,
+      ingredient_type: ingredient_types.second,
       ingredient: ingredients.second
     },
     {
       name: 'Leblon',
       description: 'Leblon Cachaça is a premium artisanal brand of the spirit cachaça produced at the Destilaria Maison Leblon in Minas Gerais, Brazil.',
       in_stock: false,
-      ingredient_category: ingredient_categories.first,
+      ingredient_type: ingredient_types.first,
       ingredient: ingredients.fourth
     }
   ]
