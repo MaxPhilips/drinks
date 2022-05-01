@@ -1,6 +1,7 @@
 <h1>Ingredients#show</h1>
 
 <h2><%= @ingredient.name %></h2>
+<p><%= @ingredient.ingredient_type.name %></p>
 
 <ul>
   <li><%= link_to 'Edit', edit_ingredient_path(@ingredient) %></li>

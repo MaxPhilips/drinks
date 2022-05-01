@@ -49,8 +49,7 @@ id
 name
 description
 in_stock
-fk: ingredient_category
-fk: ingredient_type
+fk: ingredient
 
 ingredient_types
 id
@@ -59,6 +58,7 @@ name
 ingredients
 id
 name
+fk: ingredient_type
 
 quantities
 id
