@@ -10,7 +10,15 @@
   <div>
     <%= form.label :ingredient_type_id %><br>
     <%= form.collection_select :ingredient_type_id, IngredientType.all, :id, :name, include_blank: true %>
-    <% @brand.errors.full_messages_for(:ingredient_type_id).each do |message| %>
+    <% @ingredient.errors.full_messages_for(:ingredient_type_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :in_stock %><br>
+    <%= form.check_box :in_stock %>
+    <% @ingredient.errors.full_messages_for(:in_stock).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

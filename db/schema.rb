@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_01_001300) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_01_174319) do
   create_table "brands", force: :cascade do |t|
     t.string "name"
     t.boolean "in_stock"
@@ -68,9 +68,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_01_001300) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.integer "ingredient_type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "ingredient_type_id", null: false
+    t.boolean "in_stock"
     t.index ["ingredient_type_id"], name: "index_ingredients_on_ingredient_type_id"
   end
 

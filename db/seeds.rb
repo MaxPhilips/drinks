@@ -58,10 +58,10 @@ ingredients = Ingredient.create!(
   [
     { name: 'Cognac', ingredient_type: ingredient_types.first },
     { name: 'Triple sec', ingredient_type: ingredient_types.second },
-    { name: 'Lemon juice', ingredient_type: ingredient_types.third },
+    { name: 'Lemon juice', ingredient_type: ingredient_types.third, in_stock: true },
     { name: 'Cachaça', ingredient_type: ingredient_types.first },
-    { name: 'Lime', ingredient_type: ingredient_types.fourth },
-    { name: 'Sugar', ingredient_type: ingredient_types.fifth }
+    { name: 'Lime', ingredient_type: ingredient_types.fourth, in_stock: true },
+    { name: 'Sugar', ingredient_type: ingredient_types.fifth, in_stock: false }
   ]
 )
 puts "Created #{Ingredient.count} Ingredient records"
