@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.small {
+  font-size: 0.67em;
+}
+
+.section {
+  margin-block-end: 0.67em;
+}
+
+.section > ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
