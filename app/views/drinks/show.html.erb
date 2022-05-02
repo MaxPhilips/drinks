@@ -16,7 +16,7 @@
   <ul>
     <% @drink_ingredients.each do |drink_ingredient| %>
       <li>
-        <%= drink_ingredient.quantity.amount %> <%= drink_ingredient.unit.abbreviation %> <%= drink_ingredient.ingredient.name %>
+        <%= number_to_human(drink_ingredient.quantity.amount) %> <%= drink_ingredient.unit.abbreviation %> <%= drink_ingredient.ingredient.name %>
       </li>
     <% end %>
   </ul>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_01_174319) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_01_233752) do
   create_table "brands", force: :cascade do |t|
     t.string "name"
     t.boolean "in_stock"
@@ -76,7 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_01_174319) do
   end
 
   create_table "quantities", force: :cascade do |t|
-    t.integer "amount"
+    t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

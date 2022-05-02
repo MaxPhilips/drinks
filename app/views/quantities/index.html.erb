@@ -3,7 +3,7 @@
 <ul>
   <% @quantities.each do |quantity| %>
     <li>
-      <%= link_to quantity.amount, quantity %>
+      <%= link_to number_to_human(quantity.amount), quantity %>
     </li>
   <% end %>
 </ul>
