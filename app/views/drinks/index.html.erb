@@ -1,11 +1,16 @@
 <h1>Drinks#index</h1>
 
-<ul>
-  <% @drinks.each do |drink| %>
-    <li>
-      <%= link_to drink.name, drink %>
-    </li>
-  <% end %>
-</ul>
+<%= search_form_for @search do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= tag.h2 display_results_header(@results.size) %>
+<%= tag.table do %>
+  <%= tag.thead display_sort_column_headers(@search), escape_attributes: false %>
+  <%= tag.tbody display_search_results(@results), escape_attributes: false %>
+<% end %>
 
 <p><%= link_to 'New Drink', new_drink_path %></p>

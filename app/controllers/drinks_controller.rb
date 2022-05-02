@@ -1,6 +1,13 @@
 class DrinksController < ApplicationController
   def index
-    @drinks = Drink.all
+    # @drinks = Drink.all
+
+    @search = ransack_params
+    @results  = ransack_result
+
+    # @search = Post.ransack(params[:q])
+    # @search.sorts = 'name asc' if @search.sorts.empty?
+    # @results = @search.result.paginate(page: params[:page], per_page: 20)
   end
 
   def show
@@ -55,5 +62,13 @@ class DrinksController < ApplicationController
 
   def drink_params
     params.require(:drink).permit(:name, :description, :preparation, :service_id, :drinkware_id, :drink_category_id)
+  end
+
+  def ransack_params
+    Drink.ransack(params[:q])
+  end
+
+  def ransack_result
+    @search.result(distinct: true)
   end
 end
