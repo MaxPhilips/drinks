@@ -1,13 +1,8 @@
 class DrinksController < ApplicationController
   def index
-    # @drinks = Drink.all
-
     @search = ransack_params
-    @results  = ransack_result
-
-    # @search = Post.ransack(params[:q])
-    # @search.sorts = 'name asc' if @search.sorts.empty?
-    # @results = @search.result.paginate(page: params[:page], per_page: 20)
+    @search.sorts = 'name asc' if @search.sorts.empty?
+    @drinks = @search.result().page(params[:page])
   end
 
   def show
