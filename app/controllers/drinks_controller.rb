@@ -2,7 +2,7 @@ class DrinksController < ApplicationController
   def index
     @search = ransack_params
     @search.sorts = 'name asc' if @search.sorts.empty?
-    @drinks = @search.result().page(params[:page])
+    @drinks = @search.result.page(params[:page])
   end
 
   def show
