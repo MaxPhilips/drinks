@@ -7,15 +7,6 @@ class DrinksController < ApplicationController
 
   def show
     @drink = Drink.find(params[:id])
-
-    @drink_ingredients = @drink.drink_ingredients
-
-    # ingredients can be in_stock or have a brand with in_stock
-    in_stocks = @drink_ingredients.map do |drink_ingredient|
-      drink_ingredient.ingredient.in_stock || drink_ingredient.ingredient.brands.pluck(:in_stock).any?
-    end
-
-    @can_be_made = in_stocks.all?
   end
 
   def new

@@ -14,7 +14,7 @@
 <div class="section">
   <div>Ingredients:</div>
   <ul>
-    <% @drink_ingredients.each do |drink_ingredient| %>
+    <% @drink.drink_ingredients.each do |drink_ingredient| %>
       <li>
         <%= number_to_human(drink_ingredient.quantity.amount) %> <%= drink_ingredient.unit.abbreviation %> <%= drink_ingredient.ingredient.name %>
       </li>
@@ -24,4 +24,4 @@
 
 <div class="section">Preparation: <%= @drink.preparation %></div>
 
-<div class="section">All ingredients in stock: <%= @can_be_made %></div>
+<div class="section">All ingredients in stock: <%= @drink.can_be_made? %></div>
