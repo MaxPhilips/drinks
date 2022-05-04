@@ -134,55 +134,55 @@ soda = IngredientType.create!({ name: 'Soda' })
 puts "Created #{IngredientType.count} IngredientType records"
 
 Ingredient.destroy_all
-cognac = Ingredient.create!({ name: 'Cognac', ingredient_type: spirit })
-triple_sec = Ingredient.create!({ name: 'Triple sec', ingredient_type: liquer })
-lemon_juice = Ingredient.create!({ name: 'Lemon juice', ingredient_type: juice, in_stock: true })
-cachaca = Ingredient.create!({ name: 'Cachaça', ingredient_type: spirit })
-lime = Ingredient.create!({ name: 'Lime', ingredient_type: fruit, in_stock: true })
-sugar = Ingredient.create!({ name: 'Sugar', ingredient_type: sweetener, in_stock: false })
-creme_de_cacao = Ingredient.create!({ name: 'Crème de cacao', ingredient_type: liquer })
-cream = Ingredient.create!({ name: 'Cream', ingredient_type: sweetener, in_stock: false })
-white_rum = Ingredient.create!({ name: 'White rum', ingredient_type: spirit })
-gin = Ingredient.create!({ name: 'Gin', ingredient_type: spirit })
-lime_juice = Ingredient.create!({ name: 'Lime juice', ingredient_type: juice, in_stock: false })
-green_chartreuse = Ingredient.create!({ name: 'Green Chartreuse', ingredient_type: liquer, in_stock: false })
-maraschino = Ingredient.create!({ name: 'Maraschino liquer', ingredient_type: liquer })
-cola = Ingredient.create!({ name: 'Cola', ingredient_type: soda })
-creme_de_menthe = Ingredient.create!({ name: 'Crème de menthe', ingredient_type: liquer })
-orange_juice = Ingredient.create!({ name: 'Orange juice', ingredient_type: juice, in_stock: true })
-honey_syrup = Ingredient.create!({ name: 'Honey syrup', ingredient_type: sweetener, in_stock: false })
-galliano = Ingredient.create!({ name: 'Galliano', ingredient_type: liquer, in_stock: false })
-vodka = Ingredient.create!({ name: 'Vodka', ingredient_type: spirit })
-peach_schnapps = Ingredient.create!({ name: 'Peach schnapps', ingredient_type: liquer })
-cranberry_juice = Ingredient.create!({ name: 'Cranberry juice', ingredient_type: juice, in_stock: false })
+cognac           = Ingredient.create!({ name: 'Cognac',            ingredient_type: spirit,    in_stock: false })
+triple_sec       = Ingredient.create!({ name: 'Triple sec',        ingredient_type: liquer,    in_stock: true  })
+lemon_juice      = Ingredient.create!({ name: 'Lemon juice',       ingredient_type: juice,     in_stock: false })
+cachaca          = Ingredient.create!({ name: 'Cachaça',           ingredient_type: spirit,    in_stock: false })
+lime             = Ingredient.create!({ name: 'Lime',              ingredient_type: fruit,     in_stock: true  })
+sugar            = Ingredient.create!({ name: 'Sugar',             ingredient_type: sweetener, in_stock: true  })
+creme_de_cacao   = Ingredient.create!({ name: 'Crème de cacao',    ingredient_type: liquer,    in_stock: false })
+cream            = Ingredient.create!({ name: 'Cream',             ingredient_type: sweetener, in_stock: false })
+white_rum        = Ingredient.create!({ name: 'White rum',         ingredient_type: spirit,    in_stock: false })
+gin              = Ingredient.create!({ name: 'Gin',               ingredient_type: spirit,    in_stock: true  })
+lime_juice       = Ingredient.create!({ name: 'Lime juice',        ingredient_type: juice,     in_stock: true  })
+green_chartreuse = Ingredient.create!({ name: 'Green Chartreuse',  ingredient_type: liquer,    in_stock: false })
+maraschino       = Ingredient.create!({ name: 'Maraschino liquer', ingredient_type: liquer,    in_stock: true  })
+cola             = Ingredient.create!({ name: 'Cola',              ingredient_type: soda,      in_stock: true  })
+creme_de_menthe  = Ingredient.create!({ name: 'Crème de menthe',   ingredient_type: liquer,    in_stock: true  })
+orange_juice     = Ingredient.create!({ name: 'Orange juice',      ingredient_type: juice,     in_stock: false })
+honey_syrup      = Ingredient.create!({ name: 'Honey syrup',       ingredient_type: sweetener, in_stock: true  })
+galliano         = Ingredient.create!({ name: 'Galliano',          ingredient_type: liquer,    in_stock: false })
+vodka            = Ingredient.create!({ name: 'Vodka',             ingredient_type: spirit,    in_stock: true  })
+peach_schnapps   = Ingredient.create!({ name: 'Peach schnapps',    ingredient_type: liquer,    in_stock: true  })
+cranberry_juice  = Ingredient.create!({ name: 'Cranberry juice',   ingredient_type: juice,     in_stock: false })
 puts "Created #{Ingredient.count} Ingredient records"
 
-Brand.destroy_all
-courvoisier = Brand.create!(
-  {
-    name: 'Courvoisier',
-    description: 'Courvoisier is a brand of cognac, with production based in the town of Jarnac in the Charente region of France. It is the youngest and smallest of the "big four" cognac houses (the others are Hennessy, Rémy Martin, and Martell).',
-    in_stock: true,
-    ingredient: cognac
-  }
-)
-cointreau = Brand.create!(
-  {
-    name: 'Cointreau',
-    description: "Cointreau is an orange-flavoured triple sec liqueur produced in Saint-Barthélemy-d'Anjou, France.",
-    in_stock: true,
-    ingredient: triple_sec
-  }
-)
-leblon = Brand.create!(
-  {
-    name: 'Leblon',
-    description: 'Leblon Cachaça is a premium artisanal brand of the spirit cachaça produced at the Destilaria Maison Leblon in Minas Gerais, Brazil.',
-    in_stock: false,
-    ingredient: cachaca
-  }
-)
-puts "Created #{Brand.count} Brand records"
+# Brand.destroy_all
+# courvoisier = Brand.create!(
+#   {
+#     name: 'Courvoisier',
+#     description: 'Courvoisier is a brand of cognac, with production based in the town of Jarnac in the Charente region of France. It is the youngest and smallest of the "big four" cognac houses (the others are Hennessy, Rémy Martin, and Martell).',
+#     in_stock: true,
+#     ingredient: cognac
+#   }
+# )
+# cointreau = Brand.create!(
+#   {
+#     name: 'Cointreau',
+#     description: "Cointreau is an orange-flavoured triple sec liqueur produced in Saint-Barthélemy-d'Anjou, France.",
+#     in_stock: true,
+#     ingredient: triple_sec
+#   }
+# )
+# leblon = Brand.create!(
+#   {
+#     name: 'Leblon',
+#     description: 'Leblon Cachaça is a premium artisanal brand of the spirit cachaça produced at the Destilaria Maison Leblon in Minas Gerais, Brazil.',
+#     in_stock: false,
+#     ingredient: cachaca
+#   }
+# )
+# puts "Created #{Brand.count} Brand records"
 
 Quantity.destroy_all
 quantities = Quantity.create!(
